@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meridian Billing - Premium medical billing outsourcing for US healthcare providers.">
-    <title>Meridian Billing | Premium Medical Billing Outsourcing</title>
+    <meta name="description" content="Meridian Billing - Transform your medical practice revenue cycle. See before/after results specific to your clinic.">
+    <title>Meridian Billing | Medical Billing Outsourcing for US Healthcare Providers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="premium-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 </head>
 <body>
     <div class="cursor-glow"></div>
@@ -32,13 +33,12 @@
         <div class="navbar-wrapper">
             <div class="logo">
                 <div class="logo-mark">M</div>
-                <span>Meridian</span>
+                <span>Meridian Billing</span>
             </div>
             <nav class="nav-menu">
+                <a href="#problems">Why Us</a>
                 <a href="#solutions">Solutions</a>
-                <a href="#features">Features</a>
-                <a href="#results">Results</a>
-                <a href="#pricing">Pricing</a>
+                <a href="#dashboard">Check Status</a>
                 <a href="#contact" class="nav-btn">Get Started</a>
             </nav>
             <button class="mobile-toggle" aria-label="Menu toggle">
@@ -49,6 +49,7 @@
     </header>
 
     <main>
+        <!-- HERO SECTION -->
         <section class="hero">
             <div class="hero-bg">
                 <div class="gradient-sphere grad-1"></div>
@@ -58,17 +59,17 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="pulse-dot"></span>
-                    Trusted by 500+ US Healthcare Providers
+                    Transforming US Healthcare Revenue Cycle
                 </div>
                 <h1 class="hero-title">
-                    Medical Billing That Drives <span class="highlight">Real Revenue</span>
+                    Stop Losing Money to <span class="highlight">Billing Chaos</span>
                 </h1>
                 <p class="hero-desc">
-                    Stop losing money to billing inefficiency. Our AI-enhanced outsourcing platform delivers cleaner claims, faster reimbursements, and 30%+ improvement in revenue cycle performance.
+                    US healthcare providers lose 15-20% of potential revenue due to billing inefficiency. We recover it automatically. See your transformation in 30 days.
                 </p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Start Your Free Audit</span>
+                    <a href="#dashboard" class="btn btn-primary">
+                        <span>See Your Potential Now</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M7 10H13M13 10L10 7M13 10L10 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -79,239 +80,306 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <strong>98%</strong>
-                        <span>Claim Accuracy</span>
-                    </div>
-                    <div class="stat">
-                        <strong>2.5x</strong>
-                        <span>Faster Processing</span>
-                    </div>
-                    <div class="stat">
                         <strong>$2.3M</strong>
-                        <span>Annual Avg. Recovery</span>
+                        <span>Average Recovery/Year</span>
+                    </div>
+                    <div class="stat">
+                        <strong>30 Days</strong>
+                        <span>To See Results</span>
+                    </div>
+                    <div class="stat">
+                        <strong>500+</strong>
+                        <span>US Providers Transformed</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROBLEMS SECTION -->
+        <section id="problems" class="problems-section">
+            <div class="section-header">
+                <span class="section-eyebrow">The Healthcare Billing Crisis</span>
+                <h2>Your Practice is Bleeding Money. Here's Why:</h2>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">📉</div>
+                    <h3>Claim Denials</h3>
+                    <p><strong>37% of claims</strong> are denied on first submission. You spend weeks chasing rejections instead of treating patients.</p>
+                    <div class="problem-stat">Average Loss: $95,000/year</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏱️</div>
+                    <h3>Slow Cash Flow</h3>
+                    <p>Insurance payments take <strong>45-60 days</strong> to process manually. Your accounts receivable stack up endlessly.</p>
+                    <div class="problem-stat">Cash Delay: 45-60 days</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💼</div>
+                    <h3>Manual Overhead</h3>
+                    <p>Your staff spends <strong>30% of their time</strong> on billing instead of patient care. Billing staff is expensive and leaves you vulnerable.</p>
+                    <div class="problem-stat">Staff Cost: $45,000-$65,000/year</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🚨</div>
+                    <h3>Compliance Risk</h3>
+                    <p>One coding error = HIPAA violation. Manual billing has <strong>15-20% error rate</strong>. Fines can reach $1.5M per violation.</p>
+                    <div class="problem-stat">Compliance Risk: Critical</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3>No Visibility</h3>
+                    <p>You don't know your revenue cycle status in real-time. <strong>40% of practices</strong> don't track denial patterns.</p>
+                    <div class="problem-stat">Insight: Zero real-time data</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💰</div>
+                    <h3>Revenue Leakage</h3>
+                    <p><strong>$180K per provider</strong> lost annually due to billing inefficiencies. That's money already earned but never collected.</p>
+                    <div class="problem-stat">Annual Loss: $180,000+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEFORE/AFTER SECTION -->
+        <section id="transformation" class="transformation-section">
+            <div class="section-header">
+                <span class="section-eyebrow">Real Results from Real Providers</span>
+                <h2>Before & After Outsourcing</h2>
+            </div>
+            
+            <div class="before-after-container">
+                <div class="before-after-card">
+                    <div class="before-after-header">
+                        <h3>Payment Cycle Time</h3>
+                    </div>
+                    <div class="before-after-visual">
+                        <div class="before">
+                            <div class="metric-label">BEFORE</div>
+                            <div class="big-number" style="color: #e74c3c;">45-60 Days</div>
+                            <div class="metric-desc">Manual processing</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="after">
+                            <div class="metric-label">AFTER</div>
+                            <div class="big-number" style="color: #27ae60;">18-25 Days</div>
+                            <div class="metric-desc">30-50% faster</div>
+                        </div>
+                    </div>
+                    <div class="impact">💰 Impact: +$240K annual cash flow improvement</div>
+                </div>
+
+                <div class="before-after-card">
+                    <div class="before-after-header">
+                        <h3>Claim Denial Rate</h3>
+                    </div>
+                    <div class="before-after-visual">
+                        <div class="before">
+                            <div class="metric-label">BEFORE</div>
+                            <div class="big-number" style="color: #e74c3c;">37%</div>
+                            <div class="metric-desc">First-pass rejection</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="after">
+                            <div class="metric-label">AFTER</div>
+                            <div class="big-number" style="color: #27ae60;">8%</div>
+                            <div class="metric-desc">98% accuracy rate</div>
+                        </div>
+                    </div>
+                    <div class="impact">💰 Impact: +$340K recovered annually</div>
+                </div>
+
+                <div class="before-after-card">
+                    <div class="before-after-header">
+                        <h3>Billing Staff Cost</h3>
+                    </div>
+                    <div class="before-after-visual">
+                        <div class="before">
+                            <div class="metric-label">BEFORE</div>
+                            <div class="big-number" style="color: #e74c3c;">$65,000</div>
+                            <div class="metric-desc">Full-time billing staff</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="after">
+                            <div class="metric-label">AFTER</div>
+                            <div class="big-number" style="color: #27ae60;">$3,999</div>
+                            <div class="metric-desc">Monthly outsourced</div>
+                        </div>
+                    </div>
+                    <div class="impact">💰 Impact: -$47K annual savings</div>
+                </div>
+
+                <div class="before-after-card">
+                    <div class="before-after-header">
+                        <h3>Revenue Recovery</h3>
+                    </div>
+                    <div class="before-after-visual">
+                        <div class="before">
+                            <div class="metric-label">BEFORE</div>
+                            <div class="big-number" style="color: #e74c3c;">$180K Lost</div>
+                            <div class="metric-desc">Annual leakage</div>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="after">
+                            <div class="metric-label">AFTER</div>
+                            <div class="big-number" style="color: #27ae60;">+$627K</div>
+                            <div class="metric-desc">Annual increase</div>
+                        </div>
+                    </div>
+                    <div class="impact">💰 Impact: Total annual benefit = $627K</div>
+                </div>
+            </div>
+
+            <div class="transformation-chart">
+                <h3>Revenue Transformation Over 12 Months</h3>
+                <div style="position: relative; height: 400px; width: 100%; max-width: 800px; margin: 0 auto;">
+                    <canvas id="transformationChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE DASHBOARD SECTION -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="section-header">
+                <span class="section-eyebrow">Your Custom Analysis</span>
+                <h2>See Your Potential Revenue Improvement</h2>
+                <p>Enter your clinic details to see personalized before/after projections</p>
+            </div>
+
+            <div class="dashboard-container">
+                <div class="dashboard-form">
+                    <h3>Your Practice Details</h3>
+                    <form id="dashboardForm" onsubmit="calculateMetrics(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Clinic Name</label>
+                                <input type="text" id="clinicName" placeholder="Enter clinic name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Practice Type</label>
+                                <select id="practiceType" required>
+                                    <option value="">Select type...</option>
+                                    <option value="primary">Primary Care</option>
+                                    <option value="specialty">Specialty Practice</option>
+                                    <option value="urgent">Urgent Care</option>
+                                    <option value="multispec">Multi-Specialty Group</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Monthly Claims Submitted</label>
+                                <input type="number" id="monthlyClaims" placeholder="e.g., 500" required min="50" max="10000">
+                            </div>
+                            <div class="form-group">
+                                <label>Average Claim Value</label>
+                                <input type="number" id="avgClaimValue" placeholder="e.g., 250" required min="50" max="5000">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Current Denial Rate (%)</label>
+                                <input type="number" id="denialRate" placeholder="e.g., 35" required min="5" max="100">
+                            </div>
+                            <div class="form-group">
+                                <label>Current Payment Cycle (Days)</label>
+                                <input type="number" id="paymentCycle" placeholder="e.g., 50" required min="10" max="120">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Calculate Your Potential 📊</button>
+                    </form>
+                </div>
+
+                <div class="dashboard-results" id="dashboardResults" style="display: none;">
+                    <div class="results-header">
+                        <h3 id="resultClinicName"></h3>
+                        <p>Your 12-Month Transformation Potential</p>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-label">Monthly Revenue Lost (Current)</div>
+                            <div class="metric-value" id="currentLoss">$0</div>
+                            <div class="metric-desc">Due to denials & delays</div>
+                        </div>
+                        <div class="metric-box highlight">
+                            <div class="metric-label">Monthly Revenue Recovered</div>
+                            <div class="metric-value" id="recoveredRevenue">$0</div>
+                            <div class="metric-desc">After Meridian outsourcing</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Annual Benefit</div>
+                            <div class="metric-value" id="annualBenefit">$0</div>
+                            <div class="metric-desc">Total transformation impact</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Monthly Service Cost</div>
+                            <div class="metric-value" id="monthlyCost">$0</div>
+                            <div class="metric-desc">Professional outsourcing</div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="personalizedChart"></canvas>
+                    </div>
+
+                    <div class="next-steps">
+                        <h4>Ready to Transform?</h4>
+                        <p>Your clinic could recover <strong id="totalRecovery">$0</strong> annually. That's like adding a new revenue stream with zero additional patient visits.</p>
+                        <a href="#contact" class="btn btn-primary">Schedule Free Audit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUTIONS SECTION -->
         <section id="solutions" class="solutions">
             <div class="section-header">
                 <span class="section-eyebrow">Our Solutions</span>
                 <h2>Complete Revenue Cycle Management</h2>
-                <p>From claim submission to payment posting—we handle it all with precision.</p>
             </div>
             <div class="solutions-grid">
                 <div class="solution-card">
                     <div class="card-icon">📋</div>
-                    <h3>Medical Billing</h3>
-                    <p>End-to-end charge capture, claim submission, and payment posting optimized for maximum reimbursement.</p>
+                    <h3>Medical Billing & Coding</h3>
+                    <p>End-to-end charge capture with AI-powered accuracy. 98% first-pass acceptance rate.</p>
                 </div>
                 <div class="solution-card">
                     <div class="card-icon">📊</div>
                     <h3>AR Management</h3>
-                    <p>Proactive follow-up on unpaid claims with real-time tracking and intelligent follow-up workflows.</p>
+                    <p>Real-time claim tracking, intelligent follow-ups, and aging report management.</p>
                 </div>
                 <div class="solution-card">
                     <div class="card-icon">🎯</div>
-                    <h3>Denial Management</h3>
-                    <p>Identify patterns, address root causes, and eliminate preventable claim rejections systematically.</p>
+                    <h3>Denial Prevention</h3>
+                    <p>Pattern analysis and proactive correction reduce denials by 70%.</p>
                 </div>
                 <div class="solution-card">
                     <div class="card-icon">✓</div>
                     <h3>Eligibility Verification</h3>
-                    <p>Real-time insurance verification to reduce front-end denials and improve patient experience.</p>
+                    <p>Real-time insurance verification before patient visit eliminates front-end surprises.</p>
                 </div>
                 <div class="solution-card">
                     <div class="card-icon">💻</div>
                     <h3>Medical Coding</h3>
-                    <p>Accurate, compliant coding support with documentation review and compliance optimization.</p>
+                    <p>Expert coding with compliance guarantee. Zero HIPAA violations.</p>
                 </div>
                 <div class="solution-card">
                     <div class="card-icon">🏥</div>
-                    <h3>Credentialing Support</h3>
-                    <p>Streamlined payer enrollment and credentialing to keep your practice ready for claims processing.</p>
+                    <h3>Credentialing & Enrollment</h3>
+                    <p>Fast-track payer enrollment and credentialing management.</p>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="features">
-            <div class="section-header">
-                <span class="section-eyebrow">Why Meridian</span>
-                <h2>Enterprise-Grade Features for Modern Healthcare</h2>
-            </div>
-            <div class="features-container">
-                <div class="feature-item">
-                    <div class="feature-icon">⭐</div>
-                    <h3>AI-Enhanced Processing</h3>
-                    <p>Machine learning algorithms detect errors before submission, improving first-pass acceptance rates.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔔</div>
-                    <h3>24/7 Monitoring</h3>
-                    <p>Real-time claim tracking and status updates keep you informed 24 hours a day, 7 days a week.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔒</div>
-                    <h3>HIPAA Compliant</h3>
-                    <p>Enterprise-grade security with full HIPAA compliance, encryption, and regular audits.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📈</div>
-                    <h3>Smart Analytics</h3>
-                    <p>Detailed dashboards with denial trends, aging reports, and revenue forecasting tools.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👥</div>
-                    <h3>Expert Support</h3>
-                    <p>Dedicated account managers and billing specialists available for strategic guidance and optimization.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Rapid Integration</h3>
-                    <p>Quick onboarding with minimal disruption. Most practices go live within 7-10 business days.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🛠️</div>
-                    <h3>Customizable Workflows</h3>
-                    <p>Adapt our platform to match your practice's unique needs and existing operational processes.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">✅</div>
-                    <h3>Quality Assurance</h3>
-                    <p>Multi-layer verification ensures every claim meets the highest standards before submission.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="results" class="results">
-            <div class="results-content">
-                <div class="section-header">
-                    <span class="section-eyebrow">Proven Impact</span>
-                    <h2>Results That Speak for Themselves</h2>
-                </div>
-                <div class="results-metrics">
-                    <div class="metric-card">
-                        <div class="metric-value">30%</div>
-                        <div class="metric-label">Faster Reimbursement</div>
-                        <p>Average payment cycles reduced from 45 to 30 days</p>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">40%</div>
-                        <div class="metric-label">Fewer Denials</div>
-                        <p>Preventable rejections eliminated through process optimization</p>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">25%</div>
-                        <div class="metric-label">Revenue Growth</div>
-                        <p>Average increase in annual collections for our clients</p>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">98%</div>
-                        <div class="metric-label">Claim Accuracy</div>
-                        <p>Industry-leading first-pass acceptance rates</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pricing" class="pricing">
-            <div class="section-header">
-                <span class="section-eyebrow">Transparent Pricing</span>
-                <h2>Flexible Plans for Every Practice Size</h2>
-                <p>No hidden fees. Scale as you grow.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">1,999</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <p class="desc">For small practices (0-500 claims/month)</p>
-                    <ul class="pricing-features">
-                        <li>Claim submission & posting</li>
-                        <li>Basic AR follow-up</li>
-                        <li>Monthly reporting</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
-                </div>
-                <div class="pricing-card featured">
-                    <span class="badge-popular">Most Popular</span>
-                    <h3>Professional</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">3,999</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <p class="desc">For growing practices (500-2000 claims/month)</p>
-                    <ul class="pricing-features">
-                        <li>Everything in Starter</li>
-                        <li>Advanced AR management</li>
-                        <li>Denial analysis & optimization</li>
-                        <li>Coding support (up to 10 hrs/month)</li>
-                        <li>Weekly reporting & calls</li>
-                        <li>Phone & email support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Start Free Trial</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">
-                        <span class="custom-price">Custom</span>
-                    </div>
-                    <p class="desc">For large groups (2000+ claims/month)</p>
-                    <ul class="pricing-features">
-                        <li>Everything in Professional</li>
-                        <li>Unlimited coding support</li>
-                        <li>Credentialing management</li>
-                        <li>Custom integrations</li>
-                        <li>Dedicated account team</li>
-                        <li>24/7 priority support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <div class="section-header">
-                <span class="section-eyebrow">What Clients Say</span>
-                <h2>Trusted by Healthcare Leaders</h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">"Meridian reduced our claim denials by 35% in just 3 months. Our cash flow improved immediately."</p>
-                    <div class="author">
-                        <strong>Dr. Sarah Mitchell</strong>
-                        <span>Primary Care Group, Texas</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">"The team is responsive, knowledgeable, and genuinely invested in our success. Highly recommend."</p>
-                    <div class="author">
-                        <strong>James Chen</strong>
-                        <span>Practice Administrator, California</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">"We increased our annual collections by $320K using their insights and optimization strategies."</p>
-                    <div class="author">
-                        <strong>Jennifer Lopez</strong>
-                        <span>Specialty Clinic, Florida</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- CONTACT SECTION -->
         <section id="contact" class="cta-section">
             <div class="cta-content">
-                <h2>Ready to Optimize Your Revenue Cycle?</h2>
-                <p>Get a free billing audit and custom improvement plan for your practice.</p>
+                <h2>Ready to Recover Your Lost Revenue?</h2>
+                <p>Schedule a free 30-minute audit. See your personalized recovery potential.</p>
                 
                 <div class="contact-options">
                     <div class="contact-option">
@@ -335,7 +403,7 @@
 
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" name="practiceName" placeholder="Practice Name" required>
+                        <input type="text" name="practiceName" placeholder="Clinic Name" required>
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" placeholder="Your Email" required>
@@ -346,7 +414,7 @@
                     <div class="form-group">
                         <input type="text" name="practiceType" placeholder="Practice Type" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Get Your Free Audit</button>
+                    <button type="submit" class="btn btn-primary">Get Free Audit</button>
                 </form>
                 <p class="form-note">We'll respond within 2 hours during business days.</p>
             </div>
@@ -358,15 +426,15 @@
             <div class="footer-brand">
                 <div class="logo">
                     <div class="logo-mark">M</div>
-                    <span>Meridian</span>
+                    <span>Meridian Billing</span>
                 </div>
-                <p>Premium medical billing outsourcing for US healthcare providers.</p>
+                <p>Transforming US healthcare revenue cycle. Trusted by 500+ providers.</p>
             </div>
             <div class="footer-links">
-                <h4>Product</h4>
+                <h4>Platform</h4>
+                <a href="#problems">Why Us</a>
                 <a href="#solutions">Solutions</a>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
+                <a href="#dashboard">Dashboard</a>
             </div>
             <div class="footer-links">
                 <h4>Company</h4>
@@ -382,10 +450,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Meridian Billing. All rights reserved. | HIPAA Compliant | Made for Healthcare</p>
+            <p>&copy; 2024 Meridian Billing. All rights reserved. | HIPAA Compliant | US Healthcare Specialist</p>
         </div>
     </footer>
 
     <script src="app.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>
